@@ -1,0 +1,14 @@
+<h1>Exercise App</h1>
+
+<% @exercises.each do |exercise| %>
+ <h3>
+   <%= link_to exercise.activity, exercise_path(exercise.id) %>
+ </h3>
+ <p>
+   <%= exercise.description %>
+ </p>
+<% end %>
+
+<p>
+  <%= link_to 'New Exercise', new_exercise_path %>
+</p>
